@@ -9,4 +9,3 @@ pollutantmean <- function(directory, pollutant, id = 1:332){
         mean_value
         
 }
-pollutantmean("specdata", "sulfate", 1:10)
