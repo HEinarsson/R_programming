@@ -1,0 +1,15 @@
+complete <- function(directory, id = 1:332){
+        file_list <- list.files(directory, full.names = TRUE)
+        cc <- c()
+        for(i in id){
+                file <- read.csv(file_list[i])
+                cc <- append(cc,(sum(complete.cases(file[,c(2,3)]))))
+        }
+        nobs <- na.omit(cc)
+        dat <- na.omit(data.frame(id,nobs))
+        dat
+}
+
+complete("specdata", 30:25)
+complete("specdata", c(2, 4, 8, 10, 12))
+complete("specdata", 3)
