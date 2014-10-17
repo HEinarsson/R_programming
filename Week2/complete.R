@@ -9,7 +9,3 @@ complete <- function(directory, id = 1:332){
         dat <- na.omit(data.frame(id,nobs))
         dat
 }
-
-complete("specdata", 30:25)
-complete("specdata", c(2, 4, 8, 10, 12))
-complete("specdata", 3)
